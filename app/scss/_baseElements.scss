@@ -1,0 +1,32 @@
+html, body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+button:active, button:focus {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn {
+    display: block;
+    cursor: pointer;
+    padding: 1em 3em;
+    border: none;
+    &:active {
+        border: none;
+    }
+    &.btn-warning {
+        background-color: $warning;
+        color: #fff;
+        border-radius: 5px;
+    }
+}
