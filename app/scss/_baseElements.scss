@@ -10,10 +10,42 @@ button::-moz-focus-inner {
     border: 0;
 }
 
+.bg-secondary {
+    background-color: #f6f2f2;
+}
+
 h1 {
     font-size: 4rem;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+@media screen and(max-width:960px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and(max-width:720px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
 
 .btn {
@@ -21,12 +53,18 @@ h1 {
     cursor: pointer;
     padding: 1em 3em;
     border: none;
+    border-radius: 5px;
     &:active {
         border: none;
     }
     &.btn-warning {
         background-color: $warning;
         color: #fff;
-        border-radius: 5px;
     }
+    &.btn-warning-border {
+        background-color: #fff;
+        color: $warning;
+        border: 2px solid $warning;
+    }
+    
 }
