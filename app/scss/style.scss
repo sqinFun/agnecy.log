@@ -16,6 +16,7 @@
 .previous-text {
     position: relative;
     text-align: center;
+    margin-bottom: 40px;
     &::after {
         position: absolute;
         left: 50%;
@@ -31,23 +32,51 @@
 
 .navbar {
     position: fixed;
-    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: $dark;
+    width: 100%;
     z-index: 1000;
-    .navbar__elem {
-        display: block;
-        padding: 40px 20px;
-        color: #fff;
-        text-decoration: none;
-        text-transform: uppercase;
-        &.active {
-            background-color: $warning;
+    .navbar__nav-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $dark;
+
+        .navbar__elem {
+            display: block;
+            padding: 40px 20px;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            &.active {
+                background-color: $warning;
+            }
+        }
+        &.scroll {
+            flex-direction: column;
+            .navbar__elem {
+                width: 100%;
+                padding: 20px;
+            }
+            .navbar__elem +.navbar__elem {
+                border-top: 1px solid $warning;
+            }
         }
     }
+
+    .navbar__menu-icon {
+        display: none;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
 }
+
 
 #home {
     padding-top: 200px;
@@ -74,28 +103,20 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     box-shadow: 0 0 50px 1px rgba(0,0,0,.5);
-}
-.video-wrap {
-    position: relative;
-    &::before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        content: "";
-        background: url(../img/control/Vedio_Icon.png) no-repeat;
-        background-size: contain;
-        height: 70px;
-        width: 70px;
-        z-index: 1;
-    }
 }
 
 .grid-cube {
     display: grid;
     grid-template: 1fr 1fr/ 1fr 1fr;
     grid-gap: 50px;
+}
+
+@media screen and(max-width: 720px) {
+    .grid-cube {
+        grid-template: 1fr/1fr;
+    }
 }
 
 .svg-mini {
@@ -126,6 +147,7 @@
 
 .detal-gallery {
     display: grid;
+    height: 100vh;
     grid-template-areas: "active-img active-text active-text"
                          "active-img list list";
     grid-template-columns: repeat(3, 1fr);
@@ -153,9 +175,11 @@
             position: relative;
             height: 100%;
             width: 100%;
+            &:not(.active) {
+                cursor: pointer;
+            }
             &+.detal-gallery__elem {
                 margin-left: 20px;
-                cursor: pointer;
             }
             .detal-gallery__img {
                 height: 100%;
@@ -194,5 +218,72 @@
     }
 }
 
+.contact-wrap{
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(../img/contact/1.jpg) no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-line {
+    display: flex;
+    input, textarea {
+        margin: 10px;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        color: $dark;
+        
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+
+    textarea {
+        resize: none;
+        min-height: 200px;
+    }
+
+    &.form-line-neutral {
+        input, textarea {
+            background: $neutral;
+        }
+    }
+}
+
+.grid-main-col-2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+
+@media screen and(max-width:720px) {
+    .grid-main-col-2 {
+        grid-template-columns: 2fr;
+    }
+}
+
+.secondary-info {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $dark;
+    color: $neutral;
+}
+
+.footer {
+    text-align: center;
+    color: $neutral;
+}
 
 @import "media";

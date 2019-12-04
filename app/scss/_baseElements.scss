@@ -11,7 +11,11 @@ button::-moz-focus-inner {
 }
 
 .bg-secondary {
-    background-color: #f6f2f2;
+    background-color: $secondary;
+}
+
+.bg-dark {
+    background-color: $dark;
 }
 
 h1 {

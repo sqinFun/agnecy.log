@@ -12,20 +12,25 @@
 <body>
   <header class="header">
     <div class="container">
-      <nav class="navbar container">
-        <a href="#" class="navbar__elem active">
-          home
-        </a>
-        <a href="#" class="navbar__elem">
-          portfolio
-        </a>
-        <a href="#" class="navbar__elem">
-          about us
-        </a>
-        <a href="#" class="navbar__elem">
-          contact
-        </a>
-      </nav>
+      <div class="navbar container">
+        <p class="navbar__menu-icon">
+          menu
+        </p>
+        <nav class="navbar__nav-list">
+          <a href="#home" class="navbar__elem active">
+            home
+          </a>
+          <a href="#portfolio" class="navbar__elem">
+            portfolio
+          </a>
+          <a href="#about-us" class="navbar__elem">
+            about us
+          </a>
+          <a href="#contact" class="navbar__elem">
+            contact
+          </a>
+        </nav>
+      </div>
     </div>
   </header>
   <div class="bg-secondary">
@@ -39,7 +44,7 @@
         </button>
       </div>
       <div class="video-wrap">
-        <video class="video" src="video/1.mp4"></video>
+        <video class="video" src="video/1.mp4" autoplay loop></video>
       </div>
     </div>
   </div>
@@ -175,69 +180,114 @@
     </div>
     <div class="gallery">
       <div class="gallery__elem">
-        <img class="gallery__img" src="img/gallery/1.jpg">
+        <img class="gallery__img" src="img/gallery/1.jpg" alt="">
       </div>
       <div class="gallery__elem">
-        <img class="gallery__img" src="img/gallery/2.jpg">
+        <img class="gallery__img" src="img/gallery/2.jpg" alt="">
       </div>
       <div class="gallery__elem">
-        <img class="gallery__img" src="img/gallery/3.jpg">
+        <img class="gallery__img" src="img/gallery/3.jpg" alt="">
       </div>
       <div class="gallery__elem">
-        <img class="gallery__img" src="img/gallery/4.jpg">
+        <img class="gallery__img" src="img/gallery/4.jpg" alt="">
       </div>
       <div class="gallery__elem">
-        <img class="gallery__img" src="img/gallery/5.jpg">
+        <img class="gallery__img" src="img/gallery/5.jpg" alt="">
       </div>
       <div class="gallery__elem">
-        <img class="gallery__img" src="img/gallery/6.jpg">
+        <img class="gallery__img" src="img/gallery/6.jpg" alt="">
       </div>
       <div class="gallery__elem">
-        <img class="gallery__img" src="img/gallery/7.jpg">
+        <img class="gallery__img" src="img/gallery/7.jpg" alt="">
       </div>
       <div class="gallery__elem">
-        <img class="gallery__img" src="img/gallery/8.jpg">
+        <img class="gallery__img" src="img/gallery/8.jpg" alt="">
       </div>
+    </div>
+  </div>
+  <div class="section container" id="about-us">
+    <div class="previous-text">
+      <h2>Meet our team</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed dooing eiusmod tempor incididut labore Ui / Ux ,
+        print template.</p>
+    </div>
+    <div class="detal-gallery">
+      <div class="detal-gallery__list">
+        <div class="detal-gallery__elem active">
+          <img class="detal-gallery__img" src="img/detalGallery/1.jpg" alt="">
+          <div class="detal-gallery__text">
+            <h2 class="detal-gallery__name">Noreen Houston</h2>
+            <p class="detal-gallery__description">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed dooing
+              eiusmod tempor incididut labore Ui / Ux , print template.</p>
+          </div>
+        </div>
+        <div class="detal-gallery__elem">
+          <img class="detal-gallery__img" src="img/detalGallery/2.jpg" alt="">
+          <div class="detal-gallery__text">
+            <h2 class="detal-gallery__name">Warren Harrington</h2>
+            <p class="detal-gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
+              blanditiis?</p>
+          </div>
+        </div>
+        <div class="detal-gallery__elem">
+          <img class="detal-gallery__img" src="img/detalGallery/3.jpg" alt="">
+          <div class="detal-gallery__text">
+            <h2 class="detal-gallery__name">Doris Webster</h2>
+            <p class="detal-gallery__description">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="detal-gallery__elem">
+          <img class="detal-gallery__img" src="img/detalGallery/4.jpg" alt="">
+          <div class="detal-gallery__text">
+            <h2 class="detal-gallery__name">Angelica Evans</h2>
+            <p class="detal-gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+              tempora ducimus laudantium vero?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section bg-secondary contact-wrap">
+    <div class="container contact">
+      <div class="previous-text">
+        <h2>
+          Design tips, tricks, and freebies. Delivered weekly.
+        </h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod.</p>
+      </div>
+      <form action="index.html" class="form-line">
+        <input type="email" placeholder="Email Address...">
+        <input type="submit" class="btn btn-warning" value="subscribe">
+      </form>
     </div>
   </div>
   <div class="section container">
     <div class="previous-text">
-        <h2>Meet our team</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed dooing eiusmod tempor incididut labore Ui / Ux , print template.</p>
+      <h2>get in touch</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et.ur
+        adipis cing elit, sed do eiusmod tempor incididunt ut labore et. ur adipis cing elit, sed do eiusmod tempor
+        incididunt ut labore et.</p>
     </div>
-    <div class="detal-gallery" id="about-us">
-      <div class="detal-gallery__list">
-        <div class="detal-gallery__elem active">
-            <img class="detal-gallery__img" src="img/detalGallery/1.jpg">
-            <div class="detal-gallery__text">
-                <h2 class="detal-gallery__name">Noreen Houston</h2>
-                <p class="detal-gallery__description">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed dooing eiusmod tempor incididut labore Ui / Ux , print template.</p>
-            </div>
+    <div class="grid-main-col-2" id="contact">
+      <form action="index.html" class="contact-form">
+        <div class="form-line form-line-neutral">
+          <input type="text" placeholder="Name"><input type="text" placeholder="Your Mail">
         </div>
-        <div class="detal-gallery__elem">
-            <img class="detal-gallery__img" src="img/detalGallery/2.jpg">
-            <div class="detal-gallery__text">
-                <h2 class="detal-gallery__name">Warren Harrington</h2>
-                <p class="detal-gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, blanditiis?</p>
-            </div>
+        <div class="form-line form-line-neutral">
+          <textarea placeholder="Type your message"></textarea>
         </div>
-        <div class="detal-gallery__elem">
-            <img class="detal-gallery__img" src="img/detalGallery/3.jpg">
-            <div class="detal-gallery__text">
-                <h2 class="detal-gallery__name">Doris Webster</h2>
-                <p class="detal-gallery__description">Lorem ipsum dolor sit amet.</p>
-            </div>
-        </div>
-        <div class="detal-gallery__elem">
-            <img class="detal-gallery__img" src="img/detalGallery/4.jpg">
-            <div class="detal-gallery__text">
-                <h2 class="detal-gallery__name">Angelica Evans</h2>
-                <p class="detal-gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos tempora ducimus laudantium vero?</p>
-            </div>
-        </div>
+      </form>
+      <div class="secondary-info">
+        <h3>contact info</h3>
+        <p>Jalalabad 24 / A, Ambaarkhana, Sylhet, Bangladesh</p>
+        <p>redwan@deviserweb.com</p>
+        <p>(+88) 017 617 46373</p>
       </div>
     </div>
   </div>
+  <footer class="footer section bg-dark">
+    <p>© Copyright @Junaed 2016, All rights reserved.</p>
+  </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
